@@ -10,3 +10,12 @@ gem "pry"
 gem 'require_all'
 
 gem 'cranky'
+
+# API GEMS
+gem 'rest-client', '~> 2.1.0'
+gem 'mime-types'
+gem 'netrc'
+gem 'http-accept'
+gem 'http-cookie'
+
+gem 'net-http'

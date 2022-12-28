@@ -18,11 +18,21 @@ GEM
     coderay (1.1.3)
     cranky (1.1.0)
     diff-lcs (1.5.0)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     eventmachine (1.2.7-x64-mingw32)
     faye-websocket (0.11.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
+    ffi (1.15.5-x64-mingw32)
+    http-accept (1.7.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
+    netrc (0.11.0)
     nokogiri (1.13.9-x64-mingw32)
       racc (~> 1.4)
     numerizer (0.1.1)
@@ -31,6 +41,12 @@ GEM
       method_source (~> 1.0)
     racc (1.6.0)
     require_all (3.0.0)
+    rest-client (2.1.0-x64-mingw32)
+      ffi (~> 1.9)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rexml (3.2.5)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -54,6 +70,9 @@ GEM
       chronic_duration (~> 0.10.2)
     thor (1.2.1)
     tomlrb (2.0.3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8.2-x64-mingw32)
     websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
@@ -68,8 +87,13 @@ DEPENDENCIES
   appium_lib_core
   cranky
   eventmachine (= 1.2.7)
+  http-accept
+  http-cookie
+  mime-types
+  netrc
   pry
   require_all
+  rest-client (~> 2.1.0)
   rspec
 
 BUNDLED WITH

@@ -10,7 +10,7 @@ require 'require_all'
     caps: {
     'deviceName' => 'Emulator',
     'platformName' => 'Android',
-    'platformVersion' => '11',
+    # 'platformVersion' => '11',
     'appPackage' => 'com.android.contacts',
     'appActivity' => 'com.android.contacts.activities.PeopleActivity',
     'newCommandTimeout'=>'3600',
