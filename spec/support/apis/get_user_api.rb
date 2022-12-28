@@ -6,11 +6,9 @@ require 'uri'
 class RandomUserApi
 
     def get_user_info
-        puts "comecei"
         response = RestClient.get(
             "https://randomuser.me/api/"
         )
-        puts "terminei"
 
         puts response.code
         puts response.body
