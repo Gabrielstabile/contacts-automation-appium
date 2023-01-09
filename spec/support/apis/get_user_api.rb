@@ -5,9 +5,12 @@ require 'uri'
 
 class RandomUserApi
 
-    def get_user_info
+    $first_name = ''
+    $last_name = ''
+
+    def get_user_info_rest_client
         response = RestClient.get(
-            "https://randomuser.me/api/"
+            "https://random-data-api.com/api/v2/users"
         )
 
         puts response.code
@@ -15,9 +18,15 @@ class RandomUserApi
     end
 
     def get_user_info_net_http
-        uri = URI('https://randomuser.me/api/')
-        response = Net::HTTP.get_response(uri)
-        puts response.body
-        puts response.code
+        url = URI('https://random-data-api.com/api/v2/users')
+        https = Net::HTTP.new(url.host, url.port)
+        https.use_ssl = true
+        request = Net::HTTP::Get.new(url)
+
+        response = https.request(request)
+        response_json = JSON.parse(response.body)
+
+        $first_name = response_json['first_name']
+        $last_name = response_json['last_name']
     end
 end

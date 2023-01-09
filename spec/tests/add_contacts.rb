@@ -5,16 +5,13 @@ require_all 'screens'
 
 describe 'adding contacts' do
 
-    3.times do
-
     before(:each) do
         @contact_list_screen = ContactListScreen.new
     end
 
     it 'add a new valid contact' do
         RandomUserApi.new.get_user_info_net_http
-        # @contact_list_screen.click_add_new_contact_button
+        @contact_list_screen.click_add_new_contact_button
     end
-end
 
 end
