@@ -18,14 +18,9 @@ class BaseScreen < Appium::Driver
         end
     end
 
-    def fill_first_and_last_name(text)
-        name = text.split
+    def fill_first_and_last_name
         first_and_last_name_fields = find_elements(class: 'android.widget.EditText')
-        first_and_last_name_fields[0].send_keys name[0]
-        first_and_last_name_fields[1].send_keys name[1]
+        first_and_last_name_fields[0].send_keys $first_name
+        first_and_last_name_fields[1].send_keys $last_name
     end
-
-    # def fill_field_by_class(element, text)
-    #     find_element(class: element).send_keys(text)
-    # end
 end
