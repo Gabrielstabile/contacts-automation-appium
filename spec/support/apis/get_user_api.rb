@@ -13,8 +13,9 @@ class RandomUserApi
             "https://random-data-api.com/api/v2/users"
         )
 
-        puts response.code
-        puts response.body
+        parsed_response = JSON.parse(response)
+        $first_name = parsed_response['first_name']
+        $last_name = parsed_response['last_name']
     end
 
     def get_user_info_net_http

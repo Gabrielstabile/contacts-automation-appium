@@ -11,8 +11,10 @@ class BaseScreen < Appium::Driver
 
     def verify_if_element_is_displayed(element)
         begin
+            sleep 5
             find_element(element).displayed?
             puts "element displayed, continuing the actions"
+            find_and_click_element(id: "com.android.contacts:id/left_button")
         rescue
             puts "element not displayed, continuing the actions"
         end

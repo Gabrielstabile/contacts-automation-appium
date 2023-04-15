@@ -10,7 +10,7 @@ describe 'adding contacts' do
     end
 
     it 'add a new valid contact' do
-        RandomUserApi.new.get_user_info_net_http
+        RandomUserApi.new.get_user_info_rest_client
         @contact_list_screen.click_add_new_contact_button
         @add_contact_screen.fill_personal_information
     end
