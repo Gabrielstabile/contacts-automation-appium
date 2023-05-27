@@ -8,8 +8,4 @@ class AddContactScreen < BaseScreen
         sleep 5
     end
 
-    def verify_and_dismiss_google_backup_alert
-        verify_if_element_is_displayed(id: "com.android.contacts:id/text")
-    end
-
 end

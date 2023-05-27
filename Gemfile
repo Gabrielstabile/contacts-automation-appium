@@ -17,5 +17,3 @@ gem 'netrc'
 gem 'http-accept'
 gem 'http-cookie'
 gem 'net-http'
-
-# DATABASE CONNECTION GEMS

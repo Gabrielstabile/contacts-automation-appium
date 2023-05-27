@@ -14,7 +14,7 @@ require 'require_all'
     'appPackage' => 'com.android.contacts',
     'appActivity' => 'com.android.contacts.activities.PeopleActivity',
     'newCommandTimeout'=>'3600',
-    'automationName'=> 'UiAutomator2',
+    #'automationName'=> 'UiAutomator2',
     'autoGrantPermissions'=> true,
     'autoDissmissAlerts' => true,
     'autoAcceptAlerts' => true,

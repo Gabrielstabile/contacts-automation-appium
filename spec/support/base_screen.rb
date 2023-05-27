@@ -11,7 +11,6 @@ class BaseScreen < Appium::Driver
 
     def verify_if_element_is_displayed(element)
         begin
-            sleep 5
             find_element(element).displayed?
             puts "element displayed, continuing the actions"
             find_and_click_element(id: "com.android.contacts:id/left_button")
@@ -25,4 +24,9 @@ class BaseScreen < Appium::Driver
         first_and_last_name_fields[0].send_keys $first_name
         first_and_last_name_fields[1].send_keys $last_name
     end
+
+    def verify_and_dismiss_google_backup_alert
+        verify_if_element_is_displayed(id: "com.android.contacts:id/text")
+    end
+    
 end
