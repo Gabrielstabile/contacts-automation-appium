@@ -9,6 +9,13 @@ class BaseScreen < Appium::Driver
         find_element(element).send_keys(text)
     end
 
+    def validate_element_displayed_xpath(element)
+        find_element(element).displayed?
+    end
+
+    #This method is here to validate the google connection popup that can appear in some devices
+    #in order to continue the test, if the element is displayed, it will be dismissed
+    #if the element is not displayed, the actions will continue as it is
     def verify_if_element_is_displayed(element)
         begin
             find_element(element).displayed?
@@ -28,5 +35,5 @@ class BaseScreen < Appium::Driver
     def verify_and_dismiss_google_backup_alert
         verify_if_element_is_displayed(id: "com.android.contacts:id/text")
     end
-    
+
 end

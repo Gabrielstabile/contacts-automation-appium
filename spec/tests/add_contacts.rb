@@ -13,6 +13,8 @@ describe 'adding contacts' do
         RandomUserApi.new.get_user_info_rest_client
         @contact_list_screen.click_add_new_contact_button
         @add_contact_screen.fill_personal_information
+        @add_contact_screen.save_contact
+        @add_contact_screen.validate_contact_saved
     end
 
 end
